@@ -1,4 +1,4 @@
-      window.onload=function(){ particlesJS("snowfall", particlesJS('particles-js',
+      window.onload=function(){ particlesJS("snowfall", 
     {
       "particles": {
         "number": {
