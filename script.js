@@ -1,8 +1,8 @@
-      window.onload=function(){ particlesJS("snowfall", 
+ window.onload=function(){ particlesJS("snowfall", 
     {
       "particles": {
         "number": {
-          "value": 80,
+          "value": 180,
           "density": {
             "enable": true,
             "value_area": 800
@@ -12,7 +12,7 @@
           "value": "#ffffff"
         },
         "shape": {
-          "type": "circle",
+          "type": "polygon",
           "stroke": {
             "width": 0,
             "color": "#000000"
@@ -31,7 +31,7 @@
           "random": false,
           "anim": {
             "enable": false,
-            "speed": 1,
+            "speed": 1000,
             "opacity_min": 0.1,
             "sync": false
           }
@@ -71,12 +71,12 @@
         "detect_on": "canvas",
         "events": {
           "onhover": {
-            "enable": true,
-            "mode": "repulse"
+            "enable": false,
+            "mode": "bubble"
           },
           "onclick": {
             "enable": true,
-            "mode": "push"
+            "mode": "repulse"
           },
           "resize": true
         },
@@ -88,7 +88,7 @@
             }
           },
           "bubble": {
-            "distance": 400,
+            "distance": 10,
             "size": 40,
             "duration": 2,
             "opacity": 8,
@@ -115,4 +115,4 @@
         "background_size": "cover"
       }
     }
-  ); }
+  );}
