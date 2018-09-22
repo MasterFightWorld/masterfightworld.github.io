@@ -115,4 +115,4 @@
         "background_size": "cover"
       }
     }
-  );); }
+  ); }
