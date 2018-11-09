@@ -22,7 +22,7 @@ body { background-color: black; }
     margin: auto;
     position: inherit;
     top: 80%;
-    left: 27.25%;
+    left: 27.3%;
     width: 25%;
 }
 
@@ -32,7 +32,7 @@ body { background-color: black; }
 
 #logbox p{
   margin: 20px;
-  font-size: 14px;
+  font-size: 1.5vw;
   color: #f44336;
   text-align: center;
   font-family: monospace;
