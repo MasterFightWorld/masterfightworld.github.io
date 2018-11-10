@@ -2,33 +2,47 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Log In</title>
+    <title>Register</title>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="canvas"></div>
+    <div id="logbox">
+        <h1>Register</h1>
+        <div id="namefield">
+        <p>Full Name: <input name="name" placeholder="Bob Jones" id="nfield"/></p>
+        </div>
+        <div id="emailfield">
+        <p>Email: <input type="email" name="email" id="efield" placeholder="bobjones@mail.com" /></p>
+        </div>
+        <div id="passwordfield">
+        <p>Password: <input type="password" name="password" id="pfield" placeholder="masterfightisthebest" /></p>
+        </div>
+        <div id="userfield">
+        <p>Username: <input name="username" placeholder="BobbyWarrior78" id="ufield"/></p>
+        </div>
+        <a href="#" onclick="proceed()">Continue</a>
+        <p id="description">Welcome to Masterfight, Masterfight is a story based educational game to encourage
+        people to play and learn! The stories are fun and this game will test your skill and knowledge. The game will test you on Math and
+        Science primarily, but they still have some
+        supporting subjects like Geography.</p>
+    </div>
     
 <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBa4Fbd7fMxZqe5IEx7wHkMT1GgmQod0S8",
-    authDomain: "masterfightworld1.firebaseapp.com",
-    databaseURL: "https://masterfightworld1.firebaseio.com",
-    projectId: "masterfightworld1",
-    storageBucket: "",
-    messagingSenderId: "63268946568"
+    apiKey: "AIzaSyAfonY8diRIv5RjD-WYVYB1kee1sxcNDac",
+    authDomain: "masterfightworld-87b8f.firebaseapp.com",
+    databaseURL: "https://masterfightworld-87b8f.firebaseio.com",
+    projectId: "masterfightworld-87b8f",
+    storageBucket: "masterfightworld-87b8f.appspot.com",
+    messagingSenderId: "708567824840"
   };
   firebase.initializeApp(config);
 </script>
-  </head>
-  <body>
-    <div id="canvas"></div>
-    <div id="logbox">
-      <p>Welcome to Masterfight, Masterfight is a story based educational game to encourage
-        people to play and learn! The stories are fun and this game will test your skill and knowledge. The game will test you on Math and
-        Science primarily, but they still have some
-        supporting subjects like Geography.</p>
-        <a href="mode.html">Continue</a>
-    </div>
+<script src="submit.js"></script>
   </body>
 </html>
