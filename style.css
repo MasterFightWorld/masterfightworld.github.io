@@ -6,7 +6,6 @@ body { background-color: black; }
   text-align: center;
   font-family: monospace;
 }
-#canvas { width: 100%; height: 100%; }
 #logbox {
     position: absolute;
     top: 15%;
@@ -32,6 +31,14 @@ body { background-color: black; }
     left: 27.3%;
     width: 25%;
     font-weight: bold;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
 }
 
 #logbox a:hover, a:active {
