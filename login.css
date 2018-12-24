@@ -1,0 +1,78 @@
+body { background-color: black; }
+#logbox #description{
+  margin: 20px;
+  font-size: 0.9vw;
+  color: #888787;
+  text-align: center;
+  font-family: monospace;
+}
+#logbox {
+    position: absolute;
+    top: 15%;
+    left: 37.5%;
+    width: 25%;
+    height: 70%;
+    background-color: black;
+    border-style: dotted;
+    border-width: 5px;
+    border-radius: 50px;
+    border-color: white;
+}
+#button {
+    background-color: white;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: auto;
+    position: inherit;
+    top: 78%;
+    left: 29.5%;
+    width: 25%;
+    font-weight: bold;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+#button {
+    background-color: rgb(97, 97, 97);
+}
+
+#logbox p{
+  margin: 20px;
+  font-size: 1.5vw;
+  color: white;
+  text-align: center;
+  font-family: monospace;
+}
+
+#logbox h1{
+  margin: 20px;
+  font-size: 2.5vw;
+  color: white;
+  text-align: center;
+  font-family: monospace;
+}
+
+#logbox input{
+  background-color: black;
+  color: rgb(6, 118, 255);
+  border: none;
+}
+
+#signUp{
+  color: white;
+  background-color: black;
+  size: 11px;
+  text-align: center;
+  position: absolute;
+  top: 92.5%;
+  left: 20%;
+}
