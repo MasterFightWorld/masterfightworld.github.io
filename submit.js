@@ -16,7 +16,7 @@ function proceed(){
 function send(){
   if(sendDone!=true){
   if(count || count==0){
-    if(validateData(femail.value, fpass.value, fuser.value)){
+    if(validateData(femail.value, fpass.value, fuser.value, fname.value)){
       var user=ref.child("Users").child("User"+(count.toString()));
       user.child("name").set(fname.value);
       user.child("user").set(fuser.value);
@@ -34,14 +34,22 @@ function addCount(){
   ref.child("Helpers").child("userCount").set(count+1);
 }
 
-function validateData(email, password, user){
+function validateData(email, password, user, name){
   var notFailed=true;
+  if(validateName(name)!=true){
+    reportName();
+    notFailed=false;
+  }
   if(validateEmail(email)!=true){
     reportEmail();
     notFailed=false;
   }
   if(validatePassword(password)!=true){
     reportPassword();
+    notFailed=false;
+  }
+  if(validateUser(user)!=true){
+    reportUser();
     notFailed=false;
   }
   if(emailAvailable(email)!=true){
@@ -55,12 +63,21 @@ function validateData(email, password, user){
   return notFailed;
 }
 
+function reportName(){
+  alert("Name is empty");
+}
+
+function reportUser(){
+  alert("Username is empty");
+}
+
 function emailAvailable(email){
   for(i=0; i<count; i++){
-          alert(ref.child("Users").child("User"+(count.toString())).child("email").val);
-    if(ref.child("Users").child("User"+(i.toString())).child("email").val==email){
-      return false;
-    }
+    ref.child("Users").child("User"+i).child("email").once("value").then(function(snapshot){
+      if(snapshot.val()==email){
+        reportUsedE();
+      }
+    });
   }
   return true;
 }
@@ -75,10 +92,11 @@ function reportUsedU(){
 
 function userAvailable(user){
   for(i=0; i<count; i++){
-    alert(ref.child("Users").child("User"+(count.toString())).child("user").val);
-    if(ref.child("Users").child("User"+(count.toString())).child("user").val==user){
-      return false;
-    }
+    ref.child("Users").child("User"+i).child("user").once('value').then(function(snapshot){
+      if(snapshot.val()==user){
+        reportUsedU();
+      }
+    });
   }
   return true;
 }
@@ -89,6 +107,20 @@ function reportEmail(){
 
 function reportPassword(){
   alert("Password must contain at least 6 letters and 1 number");
+}
+
+function validateName(name){
+  if(name==""){
+    return false;
+  }
+  return true;
+}
+
+function validateUser(user){
+  if(user==""){
+    return false;
+  }
+  return true;
 }
 
 function validateEmail(email){
