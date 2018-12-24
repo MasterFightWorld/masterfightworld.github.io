@@ -1,5 +1,11 @@
 body { background-color: black; }
-canvas{ width: 100%; height:100%;}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
 #story {
     position: absolute;
     top: 15%;
@@ -10,7 +16,7 @@ canvas{ width: 100%; height:100%;}
     border-style: dotted;
     border-width: 5px;
     border-radius: 50px;
-    border-color: #06264C;
+    border-color: white;
 }
 #battle {
     position: absolute;
@@ -22,11 +28,11 @@ canvas{ width: 100%; height:100%;}
     border-style: dotted;
     border-width: 5px;
     border-radius: 50px;
-    border-color: #06264C;
+    border-color: white;
 }
 
 a:link, a:visited {
-    background-color: #f44336;
+    background-color: white;
     color: black;
     padding: 14px 25px;
     text-align: center;
@@ -41,12 +47,12 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: #e0291b;
+    background-color: rgb(97, 97, 97);
 }
 h1{
   margin: 20px;
   font-size: 2.5vw;
-  color: #e0291b;
+  color: white;
   text-align: center;
   font-family: monospace;
 }
@@ -54,7 +60,7 @@ h1{
 p{
   margin: 20px;
   font-size: 1.5vw;
-  color: #e0291b;
+  color: #888787;
   text-align: center;
   font-family: monospace;
 }
