@@ -22,6 +22,8 @@ function send(){
       user.child("user").set(fuser.value);
       user.child("password").set(fpass.value);
       user.child("email").set(femail.value);
+      user.child("online").set("false");
+      setCookie("usernum", count, 1);
       sendDone=true;
       addCount();
       window.location.href="mode.html";
