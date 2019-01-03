@@ -25,6 +25,14 @@ function validateData(){
       if(snapshot.val()==emailVal){
         ref.child("Users").child("User"+ii).child("password").once("value").then(function(snapshot){
           if(snapshot.val()==passVal){
+            ref.child("Users").child("User"+ii).child("online").once("value").then(function(snapshot){
+              if(snapshot.val()!="false"){
+                alert("Your user has been logged in, in another place");
+                validation=false;
+                return 0;
+              }
+            });
+            setCookie("usernum", ""+ii, 1);
             validation=true;
             return 0;
           }
