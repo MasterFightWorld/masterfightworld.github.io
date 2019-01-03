@@ -1,4 +1,14 @@
 body { background-color: black; }
+#logoutbox{
+  position:absolute;
+  right: 130px;
+  top: 10px;
+}
+
+#logoutbox a{
+   width:70px;
+  height: 20px;
+}
 #myVideo {
     position: fixed;
     right: 0;
@@ -31,7 +41,8 @@ body { background-color: black; }
     border-color: white;
 }
 
-a:link, a:visited {
+a, a:visited {
+   cursor: pointer;
     background-color: white;
     color: black;
     padding: 14px 25px;
