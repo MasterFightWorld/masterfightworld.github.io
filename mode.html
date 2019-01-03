@@ -2,24 +2,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Register</title>
+    <title>Modes</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="mode.css">
   </head>
   <body>
     <video autoplay muted loop id="myVideo">
-  <source src="Reaviling_Sjusjoen_Ski_Senter.mp4" type="video/mp4">
+  <source src="
+Reaviling_Sjusjoen_Ski_Senter.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
     <div id="story">
       <h1>Story Mode</h1>
-        <a href="#" onclick="#">Continue</a>
+        <a onclick="checkS()">Continue</a>
         <p> Story mode is a mode where you follow a story line. You
           will start from minimal item to maximal item. You will gain alot of points from each level. You will learn things and then use things that you have learned to complete your levels. The more you learn the better you are. 
         </p>
     </div>
     <div id="battle">
       <h1>Battle Mode</h1>
-        <a href="#" onclick="#">Continue</a>
+        <a onclick="checkB()">Continue</a>
         <p> Battle mode is a mode where you can join matches
             with other players or create your own matches. You 
             can select your own character, setting, e.t.c. You won't 
@@ -27,5 +29,24 @@
             practice your skills. Battle Mode won't be educational.
         </p>
     </div>
+    <div id="logoutbox"> 
+      <a onclick="logout()">Log Out</a>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAfonY8diRIv5RjD-WYVYB1kee1sxcNDac",
+    authDomain: "masterfightworld-87b8f.firebaseapp.com",
+    databaseURL: "https://masterfightworld-87b8f.firebaseio.com",
+    projectId: "masterfightworld-87b8f",
+    storageBucket: "masterfightworld-87b8f.appspot.com",
+    messagingSenderId: "708567824840"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="cookies.js"></script>
+	<script src="connect.js">
+	</script>
   </body>
 </html>
