@@ -78,10 +78,13 @@ function emailAvailable(email){
     ref.child("Users").child("User"+i).child("email").once("value").then(function(snapshot){
       if(snapshot.val()==email){
         reportUsedE();
+       return false;
       }
+     if(i==count-1){
+       return true;
+     }
     });
   }
-  return true;
 }
 
 function reportUsedE(){
@@ -97,10 +100,13 @@ function userAvailable(user){
     ref.child("Users").child("User"+i).child("user").once('value').then(function(snapshot){
       if(snapshot.val()==user){
         reportUsedU();
+        return false;
       }
+     if(i==count-1){
+       return true;     
+     }
     });
   }
-  return true;
 }
 
 function reportEmail(){
